@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ofrece tu lote, casa, finca o inmueble a Tierra de Sueños.">
+  <title>Ofrece tu propiedad | TIERRA DE SUEÑOS</title>
+  <link rel="icon" href="assets/logo/emblema.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="index.html" aria-label="Tierra de Sueños, volver al inicio">
+    <img src="assets/logo/emblema.png" alt="Logo Tierra de Sueños">
+    <span>TIERRA DE SUEÑOS<small>INMOBILIARIA · TOPOGRAFÍA</small></span>
+  </a>
+  <a class="nav-cta" href="index.html">Volver al inicio</a>
+</header>
+<main class="form-page">
+  <section class="form-card">
+    <p class="eyebrow">¿ERES PROPIETARIO?</p>
+    <h1>Ofrece tu propiedad</h1>
+    <p>¿Tienes un lote, casa, finca u otro inmueble para vender? Cuéntanos los detalles y nos pondremos en contacto contigo.</p>
+    <form id="property-form" class="form-grid">
+      <label>Nombre completo<input name="nombre" autocomplete="name" required placeholder="Escribe tu nombre"></label>
+      <label>Teléfono o WhatsApp<input name="telefono" autocomplete="tel" required placeholder="Tu número de contacto"></label>
+      <label>Tipo de propiedad<select name="tipo" required><option value="Lote">Lote</option><option value="Casa">Casa</option><option value="Finca">Finca</option><option value="Apartamento">Apartamento</option><option value="Otro inmueble">Otro inmueble</option></select></label>
+      <label>Municipio o barrio<input name="ubicacion" required placeholder="Ej. Cúcuta, San Isidro"></label>
+      <label>Precio esperado (COP)<input name="precio" inputmode="numeric" placeholder="Ej. 85000000"></label>
+      <label>Área aproximada<input name="area" placeholder="Ej. 120 m²"></label>
+      <label class="wide">Descripción del inmueble<textarea name="descripcion" rows="5" placeholder="Cuéntanos sobre las medidas, servicios, documentos y otras características"></textarea></label>
+      <button class="wide" type="submit">Enviar información por correo ↗</button>
+    </form>
+    <p class="small-note">Al pulsar el botón se abrirá un borrador de correo para que puedas revisarlo y enviarlo. La información no se envía automáticamente desde esta página.</p>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="footer-bottom">© 2026 Tierra de Sueños · <a href="privacidad.html">Privacidad</a> · <a href="terminos.html">Términos</a></div>
+</footer>
+<script src="forms.js"></script>
+</body>
+</html>

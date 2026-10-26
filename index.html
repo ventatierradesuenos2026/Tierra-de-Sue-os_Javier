@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Encuentra lotes y viviendas con Tierra de Sueños en Cúcuta. Invierte con confianza y construye el futuro de tu familia.">
+  <title>Tierra de Sueños | Propiedades en Cúcuta</title>
+  <link rel="stylesheet" href="style.css">
+<style>
+.property-row[hidden] { display:none !important; }
+.empty-state[hidden] { display:none !important; }
+/* Mantener la foto a la izquierda y los datos a la derecha en cada anuncio */
+#listingList article.property-row { display:grid !important; grid-template-columns:minmax(270px,34%) minmax(0,1fr) !important; min-height:286px; }
+#listingList article.property-row .property-media { display:block !important; position:relative; min-height:286px; height:100%; overflow:hidden; background:#e9eee9; }
+#listingList article.property-row .main-photo { display:block; position:absolute; inset:0; width:100%; height:100%; min-height:286px; max-height:none; object-fit:cover; }
+#listingList article.property-row .property-info { min-width:0; }
+#listingList article.property-row .property-media.image-missing { display:flex !important; align-items:center; justify-content:center; }
+#listingList article.property-row .property-media.image-missing .main-photo { display:none !important; }
+@media(max-width:650px) {
+ #listingList article.property-row { grid-template-columns:minmax(0,1fr) !important; }
+ #listingList article.property-row .property-media { min-height:230px; height:230px; }
+ #listingList article.property-row .main-photo { min-height:230px; }
+}
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html" aria-label="Tierra de Sueños, inicio">
+      <img src="assets/logo/emblema.png" alt="Logo Tierra de Sueños" onerror="this.style.display='none'">
+      <span><strong>TIERRA DE SUEÑOS</strong><small>Invierte con confianza, construye el futuro de tu familia.</small></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">☰</button>
+    <nav id="mainNav">
+      <a href="#propiedades">Propiedades</a>
+      <a href="ofrecer-propiedad.html">Vende tu propiedad</a>
+      <a href="trabaja-con-nosotros.html">Trabaja con nosotros</a>
+      <a class="nav-contact" href="https://wa.me/573142127342" target="_blank" rel="noopener">Contactar</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="brand-hero" aria-label="Portada Tierra de Sueños">
+    <img src="assets/portada/portada-horizontal.png" alt="Tierra de Sueños: invierte con confianza, construye el futuro de tu familia." fetchpriority="high">
+  </section>
+  <section class="search-area">
+    <div class="search-heading">
+      <p class="eyebrow">ENCUENTRA TU PRÓXIMA INVERSIÓN</p>
+      <h1>Propiedades en venta en Cúcuta</h1>
+      <p>Encuentra el lugar donde puede comenzar tu próximo sueño.</p>
+    </div>
+    <form id="searchForm" class="filters">
+      <label class="filter-field"><span>¿Dónde buscas?</span>
+        <select id="locationFilter"><option value="all">Cúcuta, Norte de Santander</option><option value="san-isidro">San Isidro</option><option value="parques">Parques de Bolívar</option></select>
+      </label>
+      <label class="filter-field"><span>Operación</span>
+        <select id="operationFilter"><option value="venta">Venta</option></select>
+      </label>
+      <label class="filter-field"><span>Tipo de inmueble</span>
+        <select id="typeFilter"><option value="all">Todos los inmuebles</option><option value="lote">Lotes</option><option value="casa">Casas</option></select>
+      </label>
+      <label class="filter-field"><span>Precio máximo</span>
+        <select id="priceFilter"><option value="all">Cualquier precio</option><option value="20000000">$20.000.000</option><option value="23000000">$23.000.000</option><option value="75000000">$75.000.000</option></select>
+      </label>
+      <div class="filter-actions" style="display:flex;gap:7px;align-items:stretch">
+        <button class="search-button" type="submit"><span>⌕</span> Buscar</button>
+        <button type="button" id="clearFilters" style="border:1px solid #d9e3dc;border-radius:7px;background:#fff;color:#174b38;font-size:12px;font-weight:700;padding:0 12px;cursor:pointer;white-space:nowrap">Limpiar</button>
+      </div>
+    </form>
+  </section>
+
+  <section class="results-wrap" id="propiedades">
+    <div class="results-top">
+      <div><h2>Propiedades disponibles</h2><p id="resultsCount">Explora nuestros inmuebles en venta</p></div>
+      <label class="sort-field">Ordenar por
+        <select id="sortFilter"><option value="recommended">Recomendados</option><option value="low">Menor precio</option><option value="high">Mayor precio</option></select>
+      </label>
+    </div>
+
+    <div class="listing-list" id="listingList">
+      <article class="property-row" data-type="lote" data-location="san-isidro" data-price="20000000">
+        <div class="property-media">
+          <img class="main-photo" src="assets/propiedades/lotes-san-isidro/fotos/img_01.jpeg" alt="Lote medianero en San Isidro" data-gallery="lot" onerror="this.closest('.property-media').classList.add('image-missing')">
+          <span class="photo-count" data-count="lot">Lote · San Isidro</span>
+          <button class="photo-next" data-next="lot" aria-label="Ver siguiente fotografía">›</button>
+        </div>
+        <div class="property-info">
+          <div class="listing-tags"><span>EN VENTA</span><span class="tag-soft">LOTE</span></div>
+          <h3>Lote medianero en San Isidro</h3>
+          <p class="property-location">⌖ San Isidro, Cúcuta, Norte de Santander</p>
+          <div class="price">$20.000.000 <small>COP</small></div>
+          <p class="property-description">Lote de 6 m de frente por 10 m de fondo, ubicado cerca de Torres de los Arrayanes, megacolegio y supermercado Ara.</p>
+          <div class="features"><span>▱ <b>60 m²</b> de lote</span><span>↔ <b>6 × 10 m</b></span><span>◷ <b>36 cuotas</b></span></div>
+          <div class="payment"><strong>Facilidades de pago</strong><span>Inicial: $2.000.000</span><span>36 cuotas aproximadas de $500.000</span></div>
+          <div class="property-actions"><a class="button-whatsapp" href="https://wa.me/573142127342?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20el%20lote%20medianero%20en%20San%20Isidro" target="_blank" rel="noopener">Consultar por WhatsApp</a><button class="details-button" data-details="lot">Ver fotos y plano</button></div>
+        </div>
+      </article>
+
+      <article class="property-row" data-type="lote" data-location="san-isidro" data-price="23000000">
+        <div class="property-media">
+          <img class="main-photo" src="assets/propiedades/lotes-san-isidro/fotos/img_02.jpeg" alt="Lote esquinero en San Isidro" data-gallery="corner" onerror="this.closest('.property-media').classList.add('image-missing')">
+          <span class="photo-count" data-count="corner">Lote · San Isidro</span>
+          <button class="photo-next" data-next="corner" aria-label="Ver siguiente fotografía">›</button>
+        </div>
+        <div class="property-info">
+          <div class="listing-tags"><span>EN VENTA</span><span class="tag-soft">LOTE ESQUINERO</span></div>
+          <h3>Lote esquinero en San Isidro</h3>
+          <p class="property-location">⌖ San Isidro, Cúcuta, Norte de Santander</p>
+          <div class="price">$23.000.000 <small>COP</small></div>
+          <p class="property-description">Lote de esquina de 7 m de frente por 10 m de fondo, cerca de Torres de los Arrayanes, megacolegio y supermercado Ara.</p>
+          <div class="features"><span>▱ <b>70 m²</b> de lote</span><span>↔ <b>7 × 10 m</b></span><span>◷ <b>36 cuotas</b></span></div>
+          <div class="payment"><strong>Facilidades de pago</strong><span>Inicial: $2.000.000</span><span>36 cuotas aproximadas de $583.333</span></div>
+          <div class="property-actions"><a class="button-whatsapp" href="https://wa.me/573142127342?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20el%20lote%20esquinero%20en%20San%20Isidro" target="_blank" rel="noopener">Consultar por WhatsApp</a><button class="details-button" data-details="corner">Ver fotos y plano</button></div>
+        </div>
+      </article>
+
+      <article class="property-row" data-type="casa" data-location="parques" data-price="75000000">
+        <div class="property-media">
+          <img class="main-photo" src="assets/casa-parques-de-bolivar/fotos/casa_parques_de_bolivar_foto_01.jpg" alt="Casa en Parques de Bolívar" data-gallery="house" onerror="this.closest('.property-media').classList.add('image-missing')">
+          <span class="photo-count" data-count="house">Casa · Parques de Bolívar</span>
+          <button class="photo-next" data-next="house" aria-label="Ver siguiente fotografía">›</button>
+        </div>
+        <div class="property-info">
+          <div class="listing-tags"><span>EN VENTA</span><span class="tag-soft">CASA</span></div>
+          <h3>Casa en Parques de Bolívar</h3>
+          <p class="property-location">⌖ Anillo Vial Occidental, Cúcuta, Norte de Santander</p>
+          <div class="price">$75.000.000 <small>COP</small></div>
+          <p class="property-description">Vivienda ubicada en el barrio Parques de Bolívar, sobre el Anillo Vial Occidental. Escríbenos para solicitar información y coordinar una visita.</p>
+          <div class="features"><span>⌖ <b>Cúcuta</b></span><span>▶ <b>Video disponible</b></span></div>
+          <div class="property-actions"><a class="button-whatsapp" href="https://wa.me/573142127342?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20la%20casa%20en%20Parques%20de%20Bol%C3%ADvar" target="_blank" rel="noopener">Consultar por WhatsApp</a><button class="details-button" data-details="house">Ver fotos y video</button></div>
+        </div>
+      </article>
+    </div>
+    <div class="empty-state" id="emptyState" hidden>
+      <strong>No encontramos propiedades con esa combinación de filtros.</strong>
+      <p style="margin:8px 0 14px">Por ejemplo, los lotes están en San Isidro y la casa está en Parques de Bolívar. Cambia la ubicación o el tipo de inmueble.</p>
+      <button type="button" id="clearFiltersEmpty" style="border:0;border-radius:6px;background:#174b38;color:#fff;font-weight:700;padding:10px 15px;cursor:pointer">Ver todas las propiedades</button>
+    </div>
+  </section>
+
+  <section class="trust-strip">
+    <div class="trust-mark">✦</div><div><h2>Tu próximo paso comienza aquí</h2><p>En Tierra de Sueños te acompañamos para que inviertas con confianza.</p></div>
+    <a href="https://wa.me/573142127342" target="_blank" rel="noopener" class="trust-button">Hablar con un asesor</a>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-main"><div class="footer-brand"><strong>TIERRA DE SUEÑOS</strong><p>Invierte con confianza, construye el futuro de tu familia.</p></div><div><strong>Contacto</strong><p><a href="https://wa.me/573142127342">WhatsApp: 314 212 7342</a></p><p><a href="mailto:venta.tierradesuenos@gmail.com">venta.tierradesuenos@gmail.com</a></p></div><div><strong>Información</strong><p><a href="ofrecer-propiedad.html">Ofrecer una propiedad</a></p><p><a href="trabaja-con-nosotros.html">Trabaja con nosotros</a></p><p><a href="terminos.html">Términos</a> · <a href="privacidad.html">Privacidad</a> · <a href="cookies.html">Cookies</a></p></div></div>
+  <div class="footer-bottom">© 2026 Tierra de Sueños. Todos los derechos reservados.</div>
+</footer>
+
+<div class="modal" id="detailsModal" aria-hidden="true">
+  <div class="modal-backdrop" data-close-modal></div>
+  <section class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button class="modal-close" data-close-modal aria-label="Cerrar">×</button>
+    <h2 id="modalTitle">Fotos de la propiedad</h2>
+    <div id="modalContent"></div>
+  </section>
+</div>
+<script src="script.js"></script>
+<script>
+/* Corrección aislada del carrusel de fotos de la casa:
+   usa las cuatro fotos con nombre confirmado y vuelve a la primera al terminar. */
+(function () {
+  const housePhotos = [
+    "assets/casa-parques-de-bolivar/fotos/casa_parques_de_bolivar_foto_01.jpg",
+    "assets/casa-parques-de-bolivar/fotos/casa_parques_de_bolivar_foto_02.jpg",
+    "assets/casa-parques-de-bolivar/fotos/casa_parques_de_bolivar_foto_03.jpg",
+    "assets/casa-parques-de-bolivar/fotos/casa_parques_de_bolivar_foto_04.jpg"
+  ];
+
+  document.addEventListener("click", function (event) {
+    const button = event.target.closest('[data-next="house"]');
+    if (!button) return;
+
+    // Evita que el manejador anterior intente cargar una foto con nombre incorrecto.
+    event.preventDefault();
+    event.stopImmediatePropagation();
+
+    const card = button.closest(".property-row");
+    const image = card && card.querySelector('[data-gallery="house"]');
+    const media = image && image.closest(".property-media");
+    if (!image || !media) return;
+
+    let index = Number(image.dataset.housePhotoIndex || "0");
+    index = (index + 1) % housePhotos.length;
+
+    // Si una foto falla al cargar, intenta la siguiente sin dejar el carrusel bloqueado.
+    let attempts = 0;
+    function showPhoto(nextIndex) {
+      image.dataset.housePhotoIndex = String(nextIndex);
+      image.onload = function () {
+        image.style.display = "block";
+        media.classList.remove("image-missing");
+      };
+      image.onerror = function () {
+        attempts += 1;
+        if (attempts < housePhotos.length) {
+          showPhoto((nextIndex + 1) % housePhotos.length);
+        }
+      };
+      image.src = housePhotos[nextIndex];
+    }
+    showPhoto(index);
+  }, true);
+})();
+</script>
+
+</body>
+</html>

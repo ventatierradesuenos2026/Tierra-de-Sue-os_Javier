@@ -1,0 +1,35 @@
+TIERRA DE SUEÑOS — versión de diseño horizontal
+
+Esta versión reorganiza la página principal en filas horizontales inspiradas en la distribución de los portales inmobiliarios: fotografía a la izquierda e información a la derecha, con filtros superiores, precios destacados y botones de WhatsApp. Utiliza verde y dorado para conservar la identidad de Tierra de Sueños.
+
+CÓMO PROBAR
+1. Descarga y descomprime este ZIP.
+2. Abre la carpeta en Visual Studio Code.
+3. Abre index.html con Live Server, si lo tienes instalado, o abre el archivo directamente en el navegador.
+
+IMPORTANTE SOBRE LAS FOTOS
+La estructura de recursos incluida en el ZIP es una copia de trabajo. En las capturas de tu carpeta local, las fotos de San Isidro están en:
+assets/propiedades/lotes-san-isidro/fotos/
+y se llaman img_01.jpeg, img_02.jpeg, img_03.jpeg, img_04.jpeg, img_05.jpeg, img_06.jpeg e imag_07.jpeg.
+El plano de tu carpeta local aparece como:
+assets/propiedades/lotes-san-isidro/plano.png/plano_01.png
+El video del lote:
+assets/propiedades/lotes-san-isidro/videos/vid_01.mp4
+La casa tiene sus fotos en:
+assets/casa-parques-de-bolivar/fotos/
+y su video en:
+assets/casa-parques-de-bolivar/videos/vid_02.mp4
+
+Para que el ZIP funcione con tus archivos reales sin moverlos, conserva las rutas de tu carpeta original al copiar los archivos HTML, CSS y JS. Algunas rutas de las fotos de la casa pueden requerir ajuste a los nombres exactos que se ven en tu Explorador. El código oculta automáticamente las imágenes que no encuentre, para evitar que se rompa la página.
+
+DATOS PUBLICADOS
+- Lote medianero San Isidro: 6 × 10 m (60 m²), $20.000.000, inicial $2.000.000 y 36 cuotas aproximadas de $500.000.
+- Lote esquinero San Isidro: 7 × 10 m (70 m²), $23.000.000, inicial $2.000.000 y 36 cuotas aproximadas de $583.333.
+- Casa Parques de Bolívar: $75.000.000. No se añadieron habitaciones ni baños porque no se han confirmado.
+- WhatsApp: 3142127342
+- Correo: venta.tierradesuenos@gmail.com
+
+Las cuotas son aproximadas y la publicación indica los valores compartidos para el proyecto; confirma las condiciones vigentes antes de comprometer una compra.
+
+PORTADA HORIZONTAL
+La página principal ahora muestra la imagen assets/portada/portada-horizontal.png antes de los filtros y el catálogo. Copia index.html y style.css actualizados a tu proyecto local y conserva la imagen en esa ruta.
